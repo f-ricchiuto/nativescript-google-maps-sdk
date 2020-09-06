@@ -1,7 +1,8 @@
 .idea
-demo
+demo-*
 ng-demo
 tsconfig.json
+.eslint*
 *.ts
 !*.d.ts
 scripts
