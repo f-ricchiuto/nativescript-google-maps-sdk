@@ -95,3 +95,6 @@ crashlytics-build.properties
 # Publish Scripts
 publish/package-lock.json
 publish/package
+
+# eslint config
+!src/.eslintrc.js
