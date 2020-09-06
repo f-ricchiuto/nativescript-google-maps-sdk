@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "paths": {
-      "~/*": ["app/*"]
+    "paths"  : {
+      "~/*": [ "app/*" ]
     }
   },
-  "include": ["app/**/*"]
+  "include"        : [ "app/**/*" ]
 }
