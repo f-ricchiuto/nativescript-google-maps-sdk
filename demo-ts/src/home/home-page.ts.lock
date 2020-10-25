@@ -6,7 +6,8 @@
 
 import { Color, EventData, fromObject, Page }                           from '@nativescript/core';
 import { Application }                                                  from '@nativescript/core';
-import { MainViewModel }                                                from './main-view-model';
+// import { MainViewModel }                                                from './main-view-model';
+import { HelloWorldModel as MainViewModel }                                    from './main-view-model';
 import { hasPermission, requestPermission }                                    from 'nativescript-permissions';
 import { Marker, MapView, Position, Circle, Polygon, Polyline, Bounds, Style } from 'nativescript-google-maps-sdk';
 
@@ -20,6 +21,8 @@ export function onNavigatingTo(args) {
     // Initialize defaults
     page.bindingContext = new MainViewModel();
 }
+
+export function onMapReady(args: any) {}
 
 function wait(milliSeconds) {
     return new Promise(function (resolve, reject) {
@@ -66,6 +69,7 @@ function printUISettings(settings) {
 let mapView   = null;
 let viewModel = null;
 
+/*
 export function onMapReady(args) {
     mapView   = args.object as MapView; // page
     viewModel = mapView.bindingContext as MainViewModel;
@@ -234,6 +238,7 @@ export function onMapReady(args) {
         console.log(error);
     });
 }
+*/
 
 function onCoordinateTapped(args) {
     console.log('Coordinate Tapped, Lat: ' + args.position.latitude + ', Lon: ' + args.position.longitude, args);

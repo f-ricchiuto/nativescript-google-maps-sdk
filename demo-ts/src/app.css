@@ -10,16 +10,56 @@ of writing your own CSS rules. You can learn more about the
 NativeScript core theme at https://github.com/nativescript/theme
 The imported CSS rules must precede all other types of rules.
 */
-@import '~@nativescript/theme/css/core.css';
-@import '~@nativescript/theme/css/default.css';
+@import "~@nativescript/theme/css/core.css";
+@import "~@nativescript/theme/css/default.css";
 
 /* Place any CSS rules you want to apply on both iOS and Android here.
 This is where the vast majority of your CSS code goes. */
 
 /*
 The following CSS rule changes the font size of all Buttons that have the
-'-primary' class modifier.
+"-primary" class modifier.
 */
 Button.-primary {
     font-size: 18;
+}
+
+.title {
+    font-size: 30;
+    horizontal-align: center;
+    margin: 0;
+    color: #009688;
+}
+
+.snippet {
+    font-size: 18;
+    horizontal-align: center;
+    margin: 0;
+    margin-bottom: 20;
+    color: #999;
+}
+
+button {
+    font-size: 42;
+    horizontal-align: center;
+}
+
+.message {
+    font-size: 20;
+    color: #284848;
+    horizontal-align: center;
+}
+
+.infoWindowImage {
+    horizontal-align: center;
+    margin: 0;
+}
+
+.infoWindowCoordinates {
+    horizontal-align: left;
+    margin: 0;
+    color: #999999;
+    font-size: 16;
+    font-weight: bold;
+    text-decoration: none;
 }
