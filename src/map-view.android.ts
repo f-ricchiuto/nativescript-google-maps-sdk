@@ -96,6 +96,11 @@ export class MapView extends MapViewBase {
 
     public createNativeView(): any {
 
+        if(!com.google.android.gms) {
+            console.log(com.google.android);
+            throw new Error("Google Maps Services not initialized, exiting");
+        }
+
         const cameraPosition = this._createCameraPosition();
 
         let options = new com.google.android.gms.maps.GoogleMapOptions();
@@ -346,6 +351,7 @@ export class MapView extends MapViewBase {
 
     private _createCameraPosition() {
         const cpBuilder = new com.google.android.gms.maps.model.CameraPosition.Builder();
+
         let update      = false;
 
         if (!isNaN(this.latitude) && !isNaN(this.longitude)) {
